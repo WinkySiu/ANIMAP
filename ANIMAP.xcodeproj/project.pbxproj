@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A683049A1EE3CF220096A05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A68304991EE3CF220096A05F /* Assets.xcassets */; };
+		A66AAF9D1F0A22080009491C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66AAF9C1F0A22080009491C /* Assets.xcassets */; };
 		A683049C1EE3D4F20096A05F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683049B1EE3D4F20096A05F /* CameraViewController.swift */; };
 		A683049E1EE3D5C60096A05F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683049D1EE3D5C60096A05F /* NotificationViewController.swift */; };
 		A68304A01EE3D5D70096A05F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683049F1EE3D5D70096A05F /* ProfileViewController.swift */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A68304991EE3CF220096A05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A66AAF9C1F0A22080009491C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A683049B1EE3D4F20096A05F /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		A683049D1EE3D5C60096A05F /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		A683049F1EE3D5D70096A05F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 				A683049B1EE3D4F20096A05F /* CameraViewController.swift */,
 				A683049D1EE3D5C60096A05F /* NotificationViewController.swift */,
 				A683049F1EE3D5D70096A05F /* ProfileViewController.swift */,
-				A68304991EE3CF220096A05F /* Assets.xcassets */,
+				A66AAF9C1F0A22080009491C /* Assets.xcassets */,
 				A68A1BAA1EE15ED2007106CC /* Main.storyboard */,
 				A693CA7F1EE803B1007E7AED /* Mainpage.storyboard */,
 				A68A1BAF1EE15ED2007106CC /* LaunchScreen.storyboard */,
@@ -252,7 +252,7 @@
 			files = (
 				A693CA811EE803B1007E7AED /* Mainpage.storyboard in Resources */,
 				A68A1BB11EE15ED2007106CC /* LaunchScreen.storyboard in Resources */,
-				A683049A1EE3CF220096A05F /* Assets.xcassets in Resources */,
+				A66AAF9D1F0A22080009491C /* Assets.xcassets in Resources */,
 				A68A1BAC1EE15ED2007106CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

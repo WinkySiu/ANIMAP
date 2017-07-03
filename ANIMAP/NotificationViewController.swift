@@ -14,8 +14,8 @@ class NotificationViewController: UIViewController {
         super.init(coder: aDecoder)!
         
         //Set tabBarItem image
-        self.tabBarItem.selectedImage = UIImage(named: "MessageClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        self.tabBarItem.image = UIImage(named: "Message")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        self.tabBarItem.selectedImage = UIImage(named: "NotificationClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+        self.tabBarItem.image = UIImage(named: "Notification")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
     }
 
     

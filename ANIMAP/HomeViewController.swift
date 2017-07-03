@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+       
         let logo = UIImage(named: "ANIMAP Icon")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView
@@ -40,6 +40,10 @@ class HomeViewController: UIViewController {
         
         self.navigationItem.leftBarButtonItem = left_menu_button
         
+        self.tabBarController?.tabBar.barTintColor = UIColor.white
+        self.tabBarController?.tabBar.isTranslucent = false
+//        UITabBar.appearance().barTintColor = UIColor.black
+
     }
     
     func OnMenuClicked(sender: UIButton!) {

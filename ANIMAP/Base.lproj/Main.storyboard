@@ -125,7 +125,8 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="xL6-VY-C8C" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -154,8 +155,8 @@
         <image name="Camera" width="25" height="25"/>
         <image name="Message" width="25" height="25"/>
         <image name="MessageClicked" width="25" height="25"/>
-        <image name="Profile" width="25" height="25"/>
-        <image name="ProfileClicked" width="25" height="25"/>
+        <image name="Profile" width="20" height="25"/>
+        <image name="ProfileClicked" width="20" height="25"/>
         <image name="Search" width="25" height="25"/>
         <image name="SearchClicked" width="25" height="25"/>
     </resources>
