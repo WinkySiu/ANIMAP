@@ -16,21 +16,30 @@ class CameraViewController: UIViewController {
         //Set tabBarItem image
         self.tabBarItem.selectedImage = UIImage(named: "CameraClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         self.tabBarItem.image = UIImage(named: "Camera")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+    
     }
+
+    var camera = UIButton()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
-        
+        let newVC = CameraViewViewController()
+        self.present(newVC, animated: true, completion: nil)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+//    func buttonAction(sender: UIButton!) {
+//        print("tew5t")
+//        //
+//        let newVC = CameraViewViewController()
+//        self.present(newVC, animated: true, completion: nil)
+//    }
     
     
 }
