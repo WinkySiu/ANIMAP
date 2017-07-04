@@ -12,7 +12,6 @@ class ProfileViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
         //Set tabBarItem image
         self.tabBarItem.selectedImage = UIImage(named: "ProfileClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         self.tabBarItem.image = UIImage(named: "Profile")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
@@ -23,6 +22,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+ 
         
         
     }

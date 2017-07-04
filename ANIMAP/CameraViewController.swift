@@ -12,11 +12,10 @@ class CameraViewController: UIViewController {
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        
+  
         //Set tabBarItem image
         self.tabBarItem.selectedImage = UIImage(named: "CameraClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         self.tabBarItem.image = UIImage(named: "Camera")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-    
     }
 
     var camera = UIButton()
@@ -24,6 +23,9 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+  
+        
         // Do any additional setup after loading the view, typically from a nib.
         let newVC = CameraViewViewController()
         self.present(newVC, animated: true, completion: nil)

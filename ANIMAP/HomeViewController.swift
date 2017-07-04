@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
         
@@ -17,13 +18,16 @@ class HomeViewController: UIViewController {
         self.navigationController?.tabBarItem.selectedImage = UIImage(named: "HomeClicked")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
         
         self.navigationController?.tabBarItem.image = UIImage(named: "Home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
-        
     }
+    
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
+        
+    
         let logo = UIImage(named: "ANIMAP Icon")
         let imageView = UIImageView(image:logo)
         self.navigationItem.titleView = imageView

@@ -105,6 +105,11 @@ class CameraViewViewController: SwiftyCamViewController, SwiftyCamViewController
     }
     
     private func addButtons() {
+        let cancelButton = UIButton(frame: CGRect(x: 15.0, y: 15.0, width: 30.0, height: 30.0))
+        cancelButton.setImage(#imageLiteral(resourceName: "cancel"), for: UIControlState())
+        cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+        self.view.addSubview(cancelButton)
+        
         captureButton = SwiftyRecordButton(frame: CGRect(x: view.frame.midX - 37.5, y: view.frame.height - 100.0, width: 75.0, height: 75.0))
         self.view.addSubview(captureButton)
         captureButton.delegate = self
@@ -120,6 +125,10 @@ class CameraViewViewController: SwiftyCamViewController, SwiftyCamViewController
         flashButton.setImage(#imageLiteral(resourceName: "flash_outline"), for: UIControlState())
         flashButton.addTarget(self, action: #selector(toggleFlashAction(_:)), for: .touchUpInside)
         self.view.addSubview(flashButton)
+    }
+    
+    func cancel() {
+        dismiss(animated: true, completion: nil)
     }
     
     

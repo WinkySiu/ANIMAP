@@ -9,6 +9,7 @@
 import UIKit
 import AVFoundation
 import AVKit
+import Firebase
 
 class VideoViewController: UIViewController,
     UICollectionViewDelegate,
@@ -75,7 +76,18 @@ UICollectionViewDataSource {
         stickerButton.setImage(#imageLiteral(resourceName: "cancel"), for: UIControlState())
         stickerButton.addTarget(self, action: #selector(addstickerView), for: .touchUpInside)
         
+        let sendbutton = UIButton(frame: CGRect(x: (fullscreen?.width)! - 90, y: (fullscreen?.height)! - 60, width: 80, height: 35))
+        sendbutton.setImage(#imageLiteral(resourceName: "send"), for: UIControlState())
+        sendbutton.addTarget(self, action: #selector(uploadvideo), for: .touchUpInside)
+        
+        let test = UIButton(frame: CGRect(x: 90, y: (fullscreen?.height)! - 60, width: 80, height: 35))
+        test.setImage(#imageLiteral(resourceName: "send"), for: UIControlState())
+        test.addTarget(self, action: #selector(test132), for: .touchUpInside)
+        
+        view.addSubview(test)
+
         view.addSubview(stickerButton)
+        view.addSubview(sendbutton)
         view.addSubview(cancelButton)
         
         
@@ -113,16 +125,103 @@ UICollectionViewDataSource {
     }
     
     
-    func cancel() {
-        dismiss(animated: true, completion: nil)
+    func test132(){
+         //dismiss(animated: true, completion: nil)
+        
+        var thisCV: UIViewController! = self
+//
+//        self.dismiss(animated: false) {
+//            // go back to MainMenuView as the eyes of the user
+//            thisCV.dismiss(animated: false, completion: nil)
+//        }
+        
+        let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4") as! URL
+        let vc = TestingViewController(videoURL: url)
+        
+        self.dismiss(animated: true, completion: nil)
+        
+        thisCV.present(vc, animated: true, completion: nil)
+        
+        
+        
     }
     
+    func cancel() {
+        
+        dismiss(animated: true, completion: nil)        
+    }
+    
+    func uploadvideo(){
+        let filename = "test.mov"
+        let storage = Storage.storage().reference()
+        print(videoURL)
+        
+        let mask  = UIView(frame: fullscreen!)
+        mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        mask.isUserInteractionEnabled = true
+        mask.tag = 100
+        
+        let label = UILabel()
+        label.text = "Uploading ..."
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.frame = CGRect(x: (fullscreen?.width)!/2-50 , y: (fullscreen?.height)!/2-30 , width: 200.0, height: 200.0)
+        
+        mask.addSubview(label)
+        
+        self.view.addSubview(mask)
+        
+        let uploadtask = storage.child(filename).putFile(from: videoURL as URL, metadata: nil){ metadata, error in
+            if let error = error {
+                print(error)
+            }else{
+                let download = metadata!.downloadURLs
+                print(download)
+                let subViews = self.view.subviews
+                for subview in subViews{
+                    if subview.tag == 100 {
+                        print("remove")
+                        subview.removeFromSuperview()
+                    }else{
+                        print(subview.tag)
+                        
+                        let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4") as! URL
+                        let vc = TestingViewController(videoURL: url)
+                        
+                        self.dismiss(animated: true, completion: {
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                        
+                       // self.present(vc, animated: true, completion: nil)
+                        
+                    }
+                }
+
+            }
+        }
+        
+        let observer = uploadtask.observe(.progress) { snapshot in
+            print(snapshot.progress) // NSProgress object
+        }
+    }
+
+    
+        
+    func dismissMenu(){
+        print("dismiss")
+        UIView.animate(withDuration: 0.5, animations: {
+            self.blackview?.alpha = 0
+            self.mycollectionView?.frame.origin.y = (self.fullscreen?.height)!
+        })
+    }
+        
     func addstickerView(){
         
         blackview  = UIView(frame: fullscreen!)
         blackview?.backgroundColor = UIColor(white: 0, alpha: 0.5)
         blackview?.isUserInteractionEnabled = true
         blackview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissMenu)))
+        
         
         self.view.addSubview(blackview!)
         
@@ -136,14 +235,7 @@ UICollectionViewDataSource {
         
     }
     
-    func dismissMenu(){
-        print("dismiss")
-        UIView.animate(withDuration: 0.5, animations: {
-            self.blackview?.alpha = 0
-            self.mycollectionView?.frame.origin.y = (self.fullscreen?.height)!
-        })
-        
-    }
+
     
     func scrollviewInit(){
         

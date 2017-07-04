@@ -7,6 +7,10 @@ target 'ANIMAP' do
 
   # Pods for ANIMAP
   pod "SwiftyCam"
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'	
 
   target 'ANIMAPTests' do
     inherit! :search_paths
