@@ -10,6 +10,7 @@ import UIKit
 
 class CameraViewController: UIViewController {
     
+      
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
   

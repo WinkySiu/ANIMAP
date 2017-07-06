@@ -17,18 +17,21 @@ class CameraViewViewController: SwiftyCamViewController, SwiftyCamViewController
     var flashButton: UIButton!
     var captureButton: SwiftyRecordButton!
     
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         cameraDelegate = self
         maximumVideoDuration = 10.0
         shouldUseDeviceOrientation = true
         allowAutoRotate = true
         audioEnabled = true
         addButtons()
-    }
-    
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     override func viewDidAppear(_ animated: Bool) {

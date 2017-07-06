@@ -80,11 +80,11 @@ UICollectionViewDataSource {
         sendbutton.setImage(#imageLiteral(resourceName: "send"), for: UIControlState())
         sendbutton.addTarget(self, action: #selector(uploadvideo), for: .touchUpInside)
         
-        let test = UIButton(frame: CGRect(x: 90, y: (fullscreen?.height)! - 60, width: 80, height: 35))
-        test.setImage(#imageLiteral(resourceName: "send"), for: UIControlState())
-        test.addTarget(self, action: #selector(test132), for: .touchUpInside)
-        
-        view.addSubview(test)
+//        let test = UIButton(frame: CGRect(x: 90, y: (fullscreen?.height)! - 60, width: 80, height: 35))
+//        test.setImage(#imageLiteral(resourceName: "send"), for: UIControlState())
+//        test.addTarget(self, action: #selector(test132), for: .touchUpInside)
+//        
+//        view.addSubview(test)
 
         view.addSubview(stickerButton)
         view.addSubview(sendbutton)
@@ -128,14 +128,14 @@ UICollectionViewDataSource {
     func test132(){
          //dismiss(animated: true, completion: nil)
         
-        var thisCV: UIViewController! = self
+        let thisCV: UIViewController! = self
 //
 //        self.dismiss(animated: false) {
 //            // go back to MainMenuView as the eyes of the user
 //            thisCV.dismiss(animated: false, completion: nil)
 //        }
         
-        let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4") as! URL
+        let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4")! as URL
         let vc = TestingViewController(videoURL: url)
         
         self.dismiss(animated: true, completion: nil)
@@ -157,7 +157,7 @@ UICollectionViewDataSource {
         print(videoURL)
         
         let mask  = UIView(frame: fullscreen!)
-        mask.backgroundColor = UIColor(white: 0, alpha: 0.5)
+        mask.backgroundColor = UIColor(white: 0, alpha: 0.7)
         mask.isUserInteractionEnabled = true
         mask.tag = 100
         
@@ -165,7 +165,9 @@ UICollectionViewDataSource {
         label.text = "Uploading ..."
         label.textColor = .white
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.frame = CGRect(x: (fullscreen?.width)!/2-50 , y: (fullscreen?.height)!/2-30 , width: 200.0, height: 200.0)
+        label.frame = CGRect(x: (fullscreen?.width)!/2-100 , y: (fullscreen?.height)!/2-120, width: 200.0, height: 200.0)
+        label.font = UIFont.boldSystemFont(ofSize: 32)
+        
         
         mask.addSubview(label)
         
@@ -185,14 +187,15 @@ UICollectionViewDataSource {
                     }else{
                         print(subview.tag)
                         
-                        let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4") as! URL
-                        let vc = TestingViewController(videoURL: url)
+                        let urlasd = download
                         
-                        self.dismiss(animated: true, completion: {
-                            self.dismiss(animated: true, completion: nil)
-                        })
                         
-                       // self.present(vc, animated: true, completion: nil)
+                        let vc = TestingViewController(videoURL: (urlasd?[0])!)
+                        self.present(vc, animated: true, completion: nil)
+                        
+//                        self.dismiss(animated: true, completion: {
+//                            self.dismiss(animated: true, completion: nil)
+//                        })
                         
                     }
                 }

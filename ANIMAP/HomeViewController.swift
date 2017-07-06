@@ -20,12 +20,16 @@ class HomeViewController: UIViewController {
         self.navigationController?.tabBarItem.image = UIImage(named: "Home")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
         
     
         let logo = UIImage(named: "ANIMAP Icon")

@@ -12,10 +12,12 @@
 		862735A71F0A323400844FB8 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862735A61F0A323400844FB8 /* PhotoViewController.swift */; };
 		862735A91F0A325800844FB8 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862735A81F0A325800844FB8 /* MyCollectionViewCell.swift */; };
 		862735AB1F0A327B00844FB8 /* SwiftyRecordButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862735AA1F0A327B00844FB8 /* SwiftyRecordButton.swift */; };
+		8671EC411F0E053500B43520 /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671EC401F0E053500B43520 /* QuestionTableViewCell.swift */; };
+		8671EC431F0E5B3100B43520 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8671EC421F0E5B3100B43520 /* Assets.xcassets */; };
+		8671EC451F0E5DE800B43520 /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8671EC441F0E5DE800B43520 /* ArticleViewController.swift */; };
 		86DB0A641F0A3E1800932EF1 /* CameraViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB0A621F0A3E1800932EF1 /* CameraViewViewController.swift */; };
 		86DB0A651F0A3E1800932EF1 /* CameraViewViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86DB0A631F0A3E1800932EF1 /* CameraViewViewController.xib */; };
 		86DB0A671F0A963300932EF1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86DB0A661F0A963300932EF1 /* GoogleService-Info.plist */; };
-		86DB0A691F0B4EB300932EF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86DB0A681F0B4EB300932EF1 /* Assets.xcassets */; };
 		86DB0A6B1F0BA64E00932EF1 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86DB0A6A1F0BA64E00932EF1 /* TestingViewController.swift */; };
 		A683049C1EE3D4F20096A05F /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683049B1EE3D4F20096A05F /* CameraViewController.swift */; };
 		A683049E1EE3D5C60096A05F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A683049D1EE3D5C60096A05F /* NotificationViewController.swift */; };
@@ -57,10 +59,12 @@
 		862735A61F0A323400844FB8 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		862735A81F0A325800844FB8 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		862735AA1F0A327B00844FB8 /* SwiftyRecordButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyRecordButton.swift; sourceTree = "<group>"; };
+		8671EC401F0E053500B43520 /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		8671EC421F0E5B3100B43520 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8671EC441F0E5DE800B43520 /* ArticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleViewController.swift; path = ../ArticleViewController.swift; sourceTree = "<group>"; };
 		86DB0A621F0A3E1800932EF1 /* CameraViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewViewController.swift; sourceTree = "<group>"; };
 		86DB0A631F0A3E1800932EF1 /* CameraViewViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewViewController.xib; sourceTree = "<group>"; };
 		86DB0A661F0A963300932EF1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
-		86DB0A681F0B4EB300932EF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		86DB0A6A1F0BA64E00932EF1 /* TestingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		8838633ECD741735B12F2961 /* Pods-ANIMAP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANIMAP.release.xcconfig"; path = "Pods/Target Support Files/Pods-ANIMAP/Pods-ANIMAP.release.xcconfig"; sourceTree = "<group>"; };
 		8FCD70B255F5886C4A6D2C32 /* Pods-ANIMAPUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ANIMAPUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ANIMAPUITests/Pods-ANIMAPUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +157,7 @@
 		A68A1BA31EE15ED2007106CC /* ANIMAP */ = {
 			isa = PBXGroup;
 			children = (
+				8671EC441F0E5DE800B43520 /* ArticleViewController.swift */,
 				A68A1BA41EE15ED2007106CC /* AppDelegate.swift */,
 				A68A1BA61EE15ED2007106CC /* HomeViewController.swift */,
 				A68A1BA81EE15ED2007106CC /* SearchViewController.swift */,
@@ -161,7 +166,7 @@
 				A683049F1EE3D5D70096A05F /* ProfileViewController.swift */,
 				A68A1BAA1EE15ED2007106CC /* Main.storyboard */,
 				A693CA7F1EE803B1007E7AED /* Mainpage.storyboard */,
-				86DB0A681F0B4EB300932EF1 /* Assets.xcassets */,
+				8671EC421F0E5B3100B43520 /* Assets.xcassets */,
 				A68A1BAF1EE15ED2007106CC /* LaunchScreen.storyboard */,
 				86DB0A661F0A963300932EF1 /* GoogleService-Info.plist */,
 				A68A1BB21EE15ED2007106CC /* Info.plist */,
@@ -172,6 +177,7 @@
 				86DB0A621F0A3E1800932EF1 /* CameraViewViewController.swift */,
 				86DB0A631F0A3E1800932EF1 /* CameraViewViewController.xib */,
 				86DB0A6A1F0BA64E00932EF1 /* TestingViewController.swift */,
+				8671EC401F0E053500B43520 /* QuestionTableViewCell.swift */,
 			);
 			path = ANIMAP;
 			sourceTree = "<group>";
@@ -327,7 +333,7 @@
 				A693CA811EE803B1007E7AED /* Mainpage.storyboard in Resources */,
 				A68A1BB11EE15ED2007106CC /* LaunchScreen.storyboard in Resources */,
 				A68A1BAC1EE15ED2007106CC /* Main.storyboard in Resources */,
-				86DB0A691F0B4EB300932EF1 /* Assets.xcassets in Resources */,
+				8671EC431F0E5B3100B43520 /* Assets.xcassets in Resources */,
 				86DB0A671F0A963300932EF1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				862735AB1F0A327B00844FB8 /* SwiftyRecordButton.swift in Sources */,
+				8671EC411F0E053500B43520 /* QuestionTableViewCell.swift in Sources */,
 				A68304A01EE3D5D70096A05F /* ProfileViewController.swift in Sources */,
 				862735A51F0A321700844FB8 /* VideoViewController.swift in Sources */,
 				86DB0A6B1F0BA64E00932EF1 /* TestingViewController.swift in Sources */,
@@ -499,6 +506,7 @@
 				A683049E1EE3D5C60096A05F /* NotificationViewController.swift in Sources */,
 				A68A1BA91EE15ED2007106CC /* SearchViewController.swift in Sources */,
 				A683049C1EE3D4F20096A05F /* CameraViewController.swift in Sources */,
+				8671EC451F0E5DE800B43520 /* ArticleViewController.swift in Sources */,
 				862735A71F0A323400844FB8 /* PhotoViewController.swift in Sources */,
 				A68A1BA51EE15ED2007106CC /* AppDelegate.swift in Sources */,
 				86DB0A641F0A3E1800932EF1 /* CameraViewViewController.swift in Sources */,
