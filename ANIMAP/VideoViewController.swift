@@ -136,7 +136,7 @@ UICollectionViewDataSource {
 //        }
         
         let url = NSURL(string: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=3b6dd74f-04ae-46f6-bc2b-0916a466a6e4")! as URL
-        let vc = TestingViewController(videoURL: url)
+        let vc = TestingViewController(videoURL: "https://firebasestorage.googleapis.com/v0/b/animap-3b23e.appspot.com/o/test.mov?alt=media&token=17bc1ef5-bb78-472c-a3c9-8a5039b1b93b")
         
         self.dismiss(animated: true, completion: nil)
         
@@ -190,8 +190,8 @@ UICollectionViewDataSource {
                         let urlasd = download
                         
                         
-                        let vc = TestingViewController(videoURL: (urlasd?[0])!)
-                        self.present(vc, animated: true, completion: nil)
+//                        let vc = TestingViewController(videoURL: (urlasd?[0])!)
+//                        self.present(vc, animated: true, completion: nil)
                         
 //                        self.dismiss(animated: true, completion: {
 //                            self.dismiss(animated: true, completion: nil)

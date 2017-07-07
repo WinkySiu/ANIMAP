@@ -21,8 +21,9 @@ class TestingViewController: UIViewController {
 
 
 
-    init(videoURL: URL) {
-        self.videoURL = videoURL
+    init(videoURL: String) {
+        let url = NSURL(string: videoURL)
+        self.videoURL = url as! URL
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,6 +31,10 @@ class TestingViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

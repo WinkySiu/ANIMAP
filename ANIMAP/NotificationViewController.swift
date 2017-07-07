@@ -13,6 +13,9 @@ class NotificationViewController: UIViewController , UITableViewDelegate, UITabl
     @IBOutlet weak var mytableview: UITableView!
     let list = ["台中最好玩的地方", "台中哪間百貨公司好呢", "想要買到最好吃的鹽酥雞", "褲子鈕扣壞掉可以去哪裡修理啊", "走失小狗請幫忙協尋！！！","想不到了", "我想知道最酷的公司在哪裡"]
     
+    let articleIDs = ["0","1","2","3","4","5","6"]
+    
+    
     
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return .lightContent
@@ -25,6 +28,22 @@ class NotificationViewController: UIViewController , UITableViewDelegate, UITabl
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         print(indexPath.row)
+        
+//        let vc = ArticleViewController(IDs: articleIDs[indexPath.row])
+//        self.present(vc, animated: true, completion: nil)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier :"Ar") as! ArticleTableViewController
+        vc.id = list[indexPath.row]
+        
+        
+        //thread issue
+        DispatchQueue.main.async {
+            self.present(vc, animated: true, completion: nil)
+        }
+        
+        
+
     }
 
     
@@ -43,6 +62,7 @@ class NotificationViewController: UIViewController , UITableViewDelegate, UITabl
         newImgThumb.layer.cornerRadius = 10
         newImgThumb.alpha = 0.6
        // newImgThumb.backgroundColor = .red
+
 
         
         cell.cardview.addSubview(newImgThumb)
@@ -67,7 +87,7 @@ class NotificationViewController: UIViewController , UITableViewDelegate, UITabl
         self.mytableview.separatorStyle = .none
         self.mytableview.backgroundView?.backgroundColor = UIColor(colorLiteralRed: 255, green: 255, blue: 255, alpha: 0)
         
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: mytableview.frame.width, height: 100))
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: 100))
         header.backgroundColor = UIColor(white: 0, alpha: 0)
         //header.backgroundColor = .red
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: mytableview.frame.width, height: 30))
