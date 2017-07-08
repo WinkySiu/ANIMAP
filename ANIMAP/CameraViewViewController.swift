@@ -132,6 +132,7 @@ class CameraViewViewController: SwiftyCamViewController, SwiftyCamViewController
     
     func cancel() {
         dismiss(animated: true, completion: nil)
+        
     }
     
     

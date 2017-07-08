@@ -24,12 +24,17 @@ class CameraViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-  
-        
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
         let newVC = CameraViewViewController()
         self.present(newVC, animated: true, completion: nil)
+        
+        self.tabBarController?.selectedIndex = 0
+        
     }
     
     override func didReceiveMemoryWarning() {

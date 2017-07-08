@@ -49,7 +49,7 @@ class ArticleTableViewController: UITableViewController {
         
         
         headertitle.text = id
-        headerbody.text = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringimperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus ele"
+        headerbody.text = "來自日本的字體，但也支援繁體漢字與英文字型，部分字體可能會有缺字，但字體相當可愛～S2G Sea font字體下載、S2G Moon font字體下載、S2G Love font字體下載、S2G naguri font字體下載、S2G Uni font字體下載。黑體繁字型下載"
         
         let size = headerView.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
         headerView.frame.size = size

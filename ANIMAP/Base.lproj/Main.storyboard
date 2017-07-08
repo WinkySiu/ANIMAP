@@ -211,6 +211,24 @@
             </objects>
             <point key="canvasLocation" x="-668" y="36"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="iBg-xX-9Ny">
+            <objects>
+                <viewController id="3xa-fZ-V0W" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="njG-Lp-BQb"/>
+                        <viewControllerLayoutGuide type="bottom" id="rQq-FK-45h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="NuA-Ew-Oei">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AcT-SI-06U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="1193"/>
+        </scene>
         <!--Article Table View Controller-->
         <scene sceneID="VA7-jw-GNK">
             <objects>
@@ -224,9 +242,9 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="749" text="                                " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13U-le-ncz">
-                                    <rect key="frame" x="17" y="70" width="341" height="24"/>
+                                    <rect key="frame" x="17" y="70" width="341" height="29"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -242,10 +260,10 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOM-6U-51a">
-                                    <rect key="frame" x="17" y="116" width="341" height="35.5"/>
+                                    <rect key="frame" x="17" y="121" width="341" height="30.5"/>
                                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <color key="textColor" red="0.29397692625897787" green="0.29397692625897787" blue="0.29397692625897787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <color key="textColor" red="0.43608907727420632" green="0.43608907727420632" blue="0.43608907727420632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PXH-ws-dty" userLabel="line">

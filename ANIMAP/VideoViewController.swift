@@ -177,6 +177,24 @@ UICollectionViewDataSource {
             if let error = error {
                 print(error)
             }else{
+                
+                do {
+                    let asset = AVURLAsset(url: self.videoURL , options: nil)
+                    let imgGenerator = AVAssetImageGenerator(asset: asset)
+                    imgGenerator.appliesPreferredTrackTransform = true
+                    let cgImage = try imgGenerator.copyCGImage(at: CMTimeMake(0, 1), actualTime: nil)
+                    let thumbnail = UIImage(cgImage: cgImage)
+                    
+                    
+                    
+                    // thumbnail here
+                    
+                } catch let error {
+                    print("*** Error generating thumbnail: \(error.localizedDescription)")
+                }
+                               // !! check the error before proceeding
+                
+                
                 let download = metadata!.downloadURLs
                 print(download)
                 let subViews = self.view.subviews
@@ -186,10 +204,6 @@ UICollectionViewDataSource {
                         subview.removeFromSuperview()
                     }else{
                         print(subview.tag)
-                        
-                        let urlasd = download
-                        
-                        
 //                        let vc = TestingViewController(videoURL: (urlasd?[0])!)
 //                        self.present(vc, animated: true, completion: nil)
                         
@@ -199,6 +213,8 @@ UICollectionViewDataSource {
                         
                     }
                 }
+               self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
+
 
             }
         }
